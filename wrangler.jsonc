@@ -2,15 +2,5 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "incident-iq",
   "compatibility_date": "2025-03-27",
-  "pages_build_output_dir": "./dist",
-
-  // Environment-specific overrides
-  "env": {
-    "staging": {
-      "name": "incident-iq-staging"
-    },
-    "production": {
-      "name": "incident-iq"
-    }
-  }
+  "pages_build_output_dir": "./dist"
 }
