@@ -1,0 +1,263 @@
+.predictions-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pred-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.pred-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+/* Prediction cards */
+.predictions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+}
+
+.prediction-card {
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s;
+}
+
+.prediction-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+}
+
+.pred-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.pred-service h3 {
+  font-size: 1.0625rem;
+  font-family: var(--font-mono);
+  margin-bottom: 2px;
+}
+
+.pred-window {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.risk-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid;
+  flex-shrink: 0;
+}
+
+.risk-score {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.risk-label {
+  font-size: 0.5625rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Probability bar */
+.pred-metrics {
+  margin-bottom: var(--space-md);
+}
+
+.pred-metric {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.pred-metric-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  width: 70px;
+}
+
+.probability-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.probability-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.pred-metric-value {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 35px;
+  text-align: right;
+}
+
+/* Factors */
+.pred-factors {
+  margin-bottom: var(--space-md);
+}
+
+.pred-factors h4 {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.pred-factors ul {
+  margin: 0;
+  padding-left: var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.pred-related {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.pred-related-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pattern-ref {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+/* Risk heatmap */
+.risk-heatmap-section {
+  margin-bottom: var(--space-xl);
+}
+
+.risk-heatmap-section h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.risk-heatmap-section .section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.heatmap-grid {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  overflow-x: auto;
+}
+
+.heatmap-header,
+.heatmap-row {
+  display: grid;
+  grid-template-columns: 160px repeat(7, 1fr);
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.heatmap-header {
+  margin-bottom: var(--space-sm);
+}
+
+.heatmap-label {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.heatmap-day {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.heatmap-row {
+  margin-bottom: var(--space-xs);
+}
+
+.heatmap-service {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.heatmap-cell {
+  height: 28px;
+  border-radius: var(--radius-sm);
+  cursor: default;
+  transition: transform 0.1s;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  justify-content: center;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.legend-gradient {
+  width: 120px;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(239, 68, 68, 0.05), rgba(239, 68, 68, 0.8));
+}
+
+@media (max-width: 768px) {
+  .pred-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .predictions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heatmap-header,
+  .heatmap-row {
+    grid-template-columns: 120px repeat(7, 1fr);
+  }
+}

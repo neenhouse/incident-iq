@@ -1,0 +1,254 @@
+.culture-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Score hero */
+.score-hero {
+  margin-bottom: var(--space-2xl);
+}
+
+.overall-score {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+
+.score-ring-large {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.score-svg-large {
+  width: 120px;
+  height: 120px;
+}
+
+.score-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.score-grade {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.score-meta h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.trend-indicator {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.trend-indicator.improving {
+  color: var(--success);
+}
+
+.trend-indicator.declining {
+  color: var(--accent);
+}
+
+.trend-indicator.stable {
+  color: var(--warning);
+}
+
+/* Dimensions grid */
+.dimensions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.dimension-card {
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.dim-header {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.dim-score-circle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.dim-score-svg {
+  width: 44px;
+  height: 44px;
+}
+
+.dim-score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dim-info h3 {
+  font-size: 0.9375rem;
+  margin-bottom: 2px;
+}
+
+.dim-change {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.dim-change.positive {
+  color: var(--success);
+}
+
+.dim-change.negative {
+  color: var(--accent);
+}
+
+.dim-description {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.dim-recommendation {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--warning-bg);
+  border-left: 3px solid var(--warning);
+  border-radius: var(--radius-sm);
+}
+
+.rec-label {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--warning);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.dim-recommendation p {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Charts row */
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.chart-card {
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.chart-card h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+/* Celebrations */
+.celebrations {
+  margin-bottom: var(--space-xl);
+}
+
+.celebrations h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+  font-size: 1rem;
+}
+
+.celebration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.celebration-card {
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius-lg);
+}
+
+.celebration-icon {
+  font-size: 1.5rem;
+  color: var(--success);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.celebration-card h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--success);
+}
+
+.celebration-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  font-style: italic;
+}
+
+.celebration-team {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  background: var(--success-bg);
+  color: var(--success);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .overall-score {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+}
