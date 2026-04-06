@@ -14,6 +14,7 @@ const navItems = [
 export function AppLayout() {
   return (
     <div className="app-layout">
+      <a href="#main-content" className="skip-link">Skip to content</a>
       <header className="app-header">
         <NavLink to="/" className="app-logo">
           <span className="logo-icon">&#9888;</span>
@@ -33,7 +34,7 @@ export function AppLayout() {
           ))}
         </nav>
       </header>
-      <main className="app-main">
+      <main id="main-content" className="app-main">
         <Outlet />
       </main>
     </div>

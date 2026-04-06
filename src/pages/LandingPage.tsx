@@ -63,6 +63,7 @@ const stats = [
 export default function LandingPage() {
   return (
     <div className="landing">
+      <a href="#main-content" className="skip-link">Skip to content</a>
       <header className="landing-header">
         <nav className="landing-nav">
           <div className="logo">
@@ -79,7 +80,7 @@ export default function LandingPage() {
         </nav>
       </header>
 
-      <section className="hero">
+      <section id="main-content" className="hero">
         <div className="hero-badge">Incident Intelligence Platform</div>
         <h1>
           Learn from <span className="hero-accent">every</span> incident
