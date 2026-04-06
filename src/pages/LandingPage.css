@@ -54,7 +54,35 @@
 }
 
 /* Hero */
+.hero-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/hero-og.webp');
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.12;
+  filter: saturate(0.6) hue-rotate(10deg);
+  pointer-events: none;
+  transform: scale(1.04);
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 0%, var(--bg-primary, #0f0f13) 100%),
+    linear-gradient(to right, var(--bg-primary, #0f0f13) 0%, transparent 20%, transparent 80%, var(--bg-primary, #0f0f13) 100%);
+}
+
 .hero {
+  position: relative;
+  z-index: 1;
   max-width: 900px;
   margin: 0 auto;
   padding: var(--space-3xl) var(--space-lg) var(--space-2xl);

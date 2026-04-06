@@ -80,6 +80,8 @@ export default function LandingPage() {
         </nav>
       </header>
 
+      <div className="hero-wrap">
+        <div className="hero-bg" aria-hidden="true" />
       <section id="main-content" className="hero">
         <div className="hero-badge">Incident Intelligence Platform</div>
         <h1>
@@ -136,6 +138,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      </div>
 
       <section id="stats" className="stats-section">
         <div className="stats-grid">
