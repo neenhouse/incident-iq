@@ -81,7 +81,12 @@ export default function LandingPage() {
       </header>
 
       <div className="hero-wrap">
-        <div className="hero-bg" aria-hidden="true" />
+        <div className="hero-bg" aria-hidden="true">
+          <video autoPlay muted loop playsInline poster="/hero-og.webp">
+            <source src="/hero-og.webm" type="video/webm" />
+            <source src="/hero-og.mp4" type="video/mp4" />
+          </video>
+        </div>
       <section id="main-content" className="hero">
         <div className="hero-badge">Incident Intelligence Platform</div>
         <h1>
