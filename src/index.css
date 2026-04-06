@@ -93,8 +93,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; }
-h2 { font-size: 2rem; font-weight: 600; letter-spacing: -0.01em; }
-h3 { font-size: 1.5rem; font-weight: 600; }
+h2 { font-size: 2rem; font-weight: 600; letter-spacing: -0.015em; }
+h3 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em; }
 h4 { font-size: 1.25rem; font-weight: 500; }
 
 p {
@@ -133,6 +133,24 @@ code {
   min-height: 100dvh;
 }
 
+/* Page header — shared across inner pages */
+.page-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.02em;
+}
+
+.page-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
 /* Global utility classes */
 .btn {
   display: inline-flex;
@@ -153,12 +171,19 @@ code {
 .btn-primary {
   background: var(--accent);
   color: white;
+  letter-spacing: 0.01em;
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
   color: white;
   box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn-secondary {
@@ -170,6 +195,11 @@ code {
 .btn-secondary:hover {
   background: var(--bg-hover);
   border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
 }
 
 .btn-success {

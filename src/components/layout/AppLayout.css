@@ -10,7 +10,9 @@
   gap: var(--space-xl);
   padding: var(--space-md) var(--space-lg);
   border-bottom: 1px solid var(--border);
-  background: var(--bg-secondary);
+  background: rgba(18, 18, 26, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -49,8 +51,9 @@
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-md);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: color 0.2s, background 0.2s;
   white-space: nowrap;
+  position: relative;
 }
 
 .nav-link:hover {
@@ -61,6 +64,18 @@
 .nav-link-active {
   color: var(--accent);
   background: var(--accent-bg);
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
 }
 
 .nav-link-active:hover {
