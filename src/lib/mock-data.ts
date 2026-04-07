@@ -21,17 +21,6 @@ const SERVICES = [
   'cdn-edge',
 ] as const
 
-const TEAMS = [
-  'Platform',
-  'Identity',
-  'Payments',
-  'Core',
-  'Messaging',
-  'Search',
-  'Data',
-  'Infrastructure',
-] as const
-
 const SERVICE_TEAM_MAP: Record<string, string> = {
   'api-gateway': 'Platform',
   'auth-service': 'Identity',
@@ -817,4 +806,4 @@ export const mockCultureScores = generateCultureScores()
 export const mockMetricsSnapshots = generateMetricsSnapshots()
 export const mockWeaknessMap = generateWeaknessMap()
 
-export { SERVICES, TEAMS, SERVICE_TEAM_MAP }
+export { SERVICES }

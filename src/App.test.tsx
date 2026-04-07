@@ -50,4 +50,31 @@ describe('App routing', () => {
     )
     expect(await screen.findByText('Blameless Culture Scorecard')).toBeInTheDocument()
   })
+
+  it('renders the predictions page at /predictions', async () => {
+    render(
+      <MemoryRouter initialEntries={['/predictions']}>
+        <App />
+      </MemoryRouter>,
+    )
+    expect(await screen.findByText('Incident Predictor')).toBeInTheDocument()
+  })
+
+  it('renders the runbooks page at /runbooks', async () => {
+    render(
+      <MemoryRouter initialEntries={['/runbooks']}>
+        <App />
+      </MemoryRouter>,
+    )
+    expect(await screen.findByText('Runbook Generator')).toBeInTheDocument()
+  })
+
+  it('renders the weakness map page at /weaknesses', async () => {
+    render(
+      <MemoryRouter initialEntries={['/weaknesses']}>
+        <App />
+      </MemoryRouter>,
+    )
+    expect(await screen.findByText('Systemic Weakness Map')).toBeInTheDocument()
+  })
 })
